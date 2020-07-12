@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+	int M,N,max,S;
+	scanf("%d %d",&N,&M);
+	S=M*N;
+	if(N%M==0)
+	   max=M;
+	else{
+       do{
+    	max=N%M;
+    	N=M;
+    	M=max;
+	   }while(N%M!=0);
+    }
+	printf("%d",max);
+	return 0;
+}
