@@ -1,0 +1,14 @@
+int Work(char str[])  
+{  
+    int len=strlen(str);  
+    int ans=0;
+    int i,j,tmp;
+    for(i=0;i<len;i++){
+        tmp=0;
+        for(j=i+1;j<len;j++)  
+            if(str[j]<str[i])
+                tmp++;  
+        ans+=tmp*f[len-i-1];//f[]为阶乘  
+    }  
+    return ans;//比该数小的有多少个 
+}
