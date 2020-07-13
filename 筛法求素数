@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int i,j,number;
+	scanf("%d",&number);//判断1~number中的素数 
+	for(j=2;j<=number;j++){
+		for(i=2;i<j;i++){
+			if(j%i==0)
+			   break;
+	    }
+	    if(i==j)
+	    	printf("%d ",j);//输出素数 
+	}
+	return 0;
+}
