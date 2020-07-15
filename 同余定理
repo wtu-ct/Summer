@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+    int a,b,c,A,B;
+    A=a%c;
+    B=b%c;
+    if(A==B){  //余数相等则满足同余定理
+        printf("a≡b(mod c)");
+    return 0;
+}
