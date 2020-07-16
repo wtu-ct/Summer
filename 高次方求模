@@ -1,0 +1,13 @@
+#define M 
+int PowMod(int n, int p){
+      int temp,result;
+      if (p == 1)	{		
+          return n % M;	
+      }	
+      temp = Pow(n, p/2);	
+      result = (temp*temp) % M;	
+      if (p % 2 == 1){		
+          result = (result*n) % M;	
+       }	
+      return result;
+}
