@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(){
+    int N,a[22][22]={0},i,j,k;
+    scanf("%d",&N);
+    for(i=0;i<N;i++)
+		a[i][0]=1;
+    for(i=0;i<N;i++){
+    	for(j=0;j<N-i-1;j++)
+    		printf("   ");
+        printf("%d",a[i][0]);
+    	for(k=1;k<=i;k++){
+    		a[i][k]=a[i-1][k-1]+a[i-1][k];
+    	    printf("%6d",a[i][k]);
+		}
+    	printf("\n");
+    }
+    return 0;
+}
